@@ -43,6 +43,8 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 10px; }
+  .app-header h1 {
+    font-size: 28px; }
   .app-header a {
     font-size: 11px;
     color: #FFFFFF; }
@@ -50,9 +52,6 @@ a {
     background: rgba(0, 0, 0, 0.1);
     padding: 10px 15px;
     border-radius: 4px; }
-
-.app-header > * {
-  border: 1px solid red; }
 
 .content {
   background-color: #fafafa;

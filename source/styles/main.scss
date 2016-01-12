@@ -35,6 +35,9 @@ a {
   align-items: center;
   justify-content: space-between;
   padding: 10px;
+  h1 {
+    font-size: 28px;
+  }
   a {
     font-size: 11px;
     color: $primary-color-text;
@@ -44,9 +47,6 @@ a {
     padding: 10px 15px;
     border-radius: 4px;
   }
-}
-.app-header > * {
-  border: 1px solid red;
 }
 .content {
   background-color: #fafafa;
