@@ -9,12 +9,17 @@ function handleError(err) {
   this.emit('end');
 }
 
-gulp.task('browser-sync', ['build', 'sass'], function () {
+gulp.task('browser-sync', ['build', 'sass', 'cp'], function () {
   browserSync({
     server: {
       baseDir: '..'
     }
   });
+});
+
+gulp.task('cp', function(){
+  return gulp.src('js/main.js', { base: '.' })
+    .pipe(gulp.dest('..'));
 });
 
 gulp.task('build', function () {
@@ -38,6 +43,7 @@ gulp.task('rebuild', ['build'], function () {
 gulp.task('watch', function () {
   gulp.watch(['**/*.html'], ['rebuild']);
   gulp.watch(['styles/*.scss'], ['sass']);
+  gulp.watch(['js/main.js'], ['cp']);
 })
 
 gulp.task('default', ['browser-sync', 'watch']);
